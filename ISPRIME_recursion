@@ -1,0 +1,27 @@
+#include<stdio.h>
+int n;
+int isprime(int n,int i)
+{
+    if(n<=2)
+    {
+        if(n<2)
+         return 1;
+        else
+        return 0;
+    }
+    else if(n%i==0)
+     return 1;
+    isprime(n,i+1);
+}
+int main()
+{
+    int s=0;
+    printf("ENTER NUMBER");
+    scanf("%d",&n);
+    s=isprime(n,2);
+    if(s==1)
+    printf("PRIME");
+    else 
+    printf("false");
+    return 1;
+}
